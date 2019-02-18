@@ -1,0 +1,12 @@
+@mixin transtion($property) {
+    -webkit-transition: $property;
+    /* WebKit */
+    -moz-transition: $property;
+    /* Mozilla */
+    -o-transition: $property;
+    /* Opera */
+    -ms-transition: $property;
+    /* Internet Explorer */
+    transition: $property;
+    /* CSS3 */
+}

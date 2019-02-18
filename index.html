@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TITA MEDIA test</title>
+    <link rel="stylesheet" href="css/flexboxgrid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="row center-xs center-sm center-md center-lg">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <img src="img/logo_here.png" alt="logo here">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#news">ABOUT</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">PRODUCTS</a>
+                        <div class="dropdown-content">
+                            <a href="#">Product 1</a>
+                            <a href="#">Product 2</a>
+                            <a href="#">Product 3</a>
+                        </div>
+                    </li>
+                    <li><a href="#news">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="slider" class="content-slider row middle-xs center-xs">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                        quae rerum sint enim quam incidunt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="description">
+        <div class="row center-xs">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="content-description">
+                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <hr>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat cupiditate animi
+                        reprehenderit
+                        excepturi non quis magnam cum explicabo molestias esse quos quae tenetur cumque soluta accusamus
+                        magni vero, nam rem!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur praesentium
+                        dolorem
+                        temporibus, deserunt commodi officiis consequatur incidunt iste mollitia ab nesciunt maxime a
+                        voluptas. Voluptas commodi placeat minus fugit?
+                        lore
+                    </p>
+                    <a href="#">You can learn more about the sample here:</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" id="contentPhone">
+                <img src="img/phone.png" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        // Datos de las imagenes tipo json
+        var datos = {
+            "img1": "./img/image-big.png",
+            "img2": "./img/image-big2.png",
+            "img3": "./img/image-big3.jpg"
+        };
+        imagenes = [];
+        k = 0;
+        recorridoDatos(datos)
+
+        function recorridoDatos(obj) {
+            for (const i in datos) {
+                element = datos[i];
+                imagenes.push(element);
+            }
+            setInterval('seleccionarImagen(imagenes)', 4000);
+        }
+        function seleccionarImagen(imagenes) {
+            if (k < imagenes.length) {
+                const image = imagenes[k];
+
+                k++;
+                pintarBackground(image)
+            }
+            else {
+                k = 0;
+            }
+        }
+        function pintarBackground(image) {
+            var slider = document.getElementById("slider");
+            slider.setAttribute("style", `
+            background: url(${image});
+            background-size: cover;
+            `);
+        }
+    </script>
+</body>
+
+</html>
