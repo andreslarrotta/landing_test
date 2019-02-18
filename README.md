@@ -23,7 +23,7 @@ gulp --version
 ## Install tool
 - clone the repository
 ```
-git clone https://github.com/andreslarrotta/Taskautomation.git
+git clone https://github.com/andreslarrotta/landing_test
 ```
 or download proyect
 - Open a terminal or console and write the command 
