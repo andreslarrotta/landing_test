@@ -1,4 +1,4 @@
-# Taskautomation
+# Landing Test
 A way to improve our skills and have a repository dedicated to a gulp file to help in our projects, this is a the best way to begins in do faster a developed.
 
 ##Requirements
